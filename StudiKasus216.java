@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class StudiKasus216 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -16,12 +17,14 @@ public class StudiKasus216 {
 
             if (juara >= 1 && juara <= 3) {
                 if (dokumen >= 4) {
-                    System.out.println("Status : Berhak memperoleh dana penghargaan (Juara" + ", dokumen lengkap). ");
-                    }
+                    System.out.println("Status : Berhak memperoleh dana penghargaan (Juara" + juara + ", dokumen lengkap). ");
                 } else {
                     System.out.println("Status : Dokumen tidak lengkap (kurang " + (4 - dokumen) + " dokumen). Dana penghargaan tidak diberikan.");
                 }
-
+            } else {
+                System.out.println("Status : Tidak memperoleh dana penghargaan (hanya untuk Juara 1/2/3).");
+            }
+            
         } else if (jenis.equals("pkm")) {
             System.out.print("Jumlah dokumen : ");
             int dokumen = sc.nextInt();
@@ -32,7 +35,7 @@ public class StudiKasus216 {
                 if (dokumen >= 4) {
                     System.out.println("Status : Berhak memperoleh dana penghargaan (PKM lolos pendanaan).");
                 } else {
-                    System.out.println("Status : Tidak memperoleh dana penghargaan (PKM tidak lolos pendanaan).");
+                    System.out.println("Status : Dokumen tidak lengkap (kurang " + (4 - dokumen) + " dokumen). Dana penghargaan tidak diberikan.");
                 }
 
             } else {
