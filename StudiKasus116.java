@@ -15,6 +15,5 @@ public class StudiKasus116 {
 
         totalHarga = jumlahCup * hargaPerCup;
         diskon = 0;
-
-            }
+    }
 }
